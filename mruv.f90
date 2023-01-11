@@ -14,7 +14,7 @@ read(*,*) tipo
 if (tipo == modo1) then
         write(*,*) "Inserir valores s0(m) v0(km/h) t(s) a(m/s^2):"
         read(*,*) s0, v0, t, a
-        v0 = 108/3.6
+        v0 = v0/3.6
         s = s0+v0*t+(a*t**2)/2
         
         write(*,*) " o carro percorreu por s =", s, "(m) até parar."
@@ -27,7 +27,7 @@ else if (tipo == modo2) then
         ! isolamos a para ser calculado.
         
         !v = 0
-        v0 = 108/3.6
+        v0 = v0/3.6
         a = (v1-v0)/t
 
         write(*,*) " A aceleração é a =", a, "m/s**2"
