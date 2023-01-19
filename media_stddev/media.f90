@@ -1,16 +1,18 @@
-program media
-    integer i,d,C(5)
+program Media
+    implicit none
+    integer i,C(5)
     real :: soma
-    write(*,*) " Digite a dimensão do vetor de valores"
-    read *, d
+    real med
+
     write(*,*) " Digite os valores consecutivamente"
     read *,C
     print *, C
     soma = 0.0
-    do i=1,d
+
+    do i=1,5
         soma = soma + C(i)
-    
     enddo
-    print *, soma
-    !do i=
-end program media
+    med = soma / 5
+    print *,'=========='
+    print *," A média é = ", med 
+end program Media
